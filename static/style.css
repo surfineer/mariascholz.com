@@ -14,7 +14,7 @@ body {
   justify-content: center;
   align-items: center; /*center the content both horizontally and vertically within the container*/
   height: 100vh; /* This ensures the element takes up the full height of the viewport making it vertically centered.*/
-  background-image: url("background.jpg");
+  background-image: url(background.jpg);
   background-size: cover;
   background-position: center;
   letter-spacing: -2px;
