@@ -6,6 +6,7 @@ body {
   color: white; /* Set the color of the text to make it visible on the background */
   font-family: 'Barlow Semi Condensed', sans-serif;
   text-align: center;
+  background-image: url(background.jpg);
 }
 
 .header {
@@ -13,42 +14,16 @@ body {
   flex-direction: column; /*stacks the content of this class underneath*/
   justify-content: center;
   align-items: center; /*center the content both horizontally and vertically within the container*/
-  height: 100vh; /* This ensures the element takes up the full height of the viewport making it vertically centered.*/
-  background-image: url(background.jpg);
+  height: 30vh; /* This ensures the element takes up the full height of the viewport making it vertically centered.*/
   background-size: cover;
   background-position: center;
-  letter-spacing: -2px;
   font-size: 2vw;
   white-space: nowrap; /* Prevents text from breaking into multiple lines */
 }
 
-.page-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vw;
-  padding: 10px;
-}
-
-.profiles {
-  font-size: 1vw;
-  margin: 0 auto;
-  position: relative;
-  top: 10%; /*vertically positions the container at x % of its parent's height.*/
-  transform: translateY(-10%); /*adjust the vertical positioning so that the container is vertically centered relative to its parent.*/
-  display: flex; /*makes the child sections align next to each other*/
-  flex-wrap: wrap; /*ensures that the sections wrap to the next line if they exceed the container's width.*/
-}
-
-.section {
-  flex: 1;
-  padding: 20px;
-}
-
 .list {
-  text-align: left;
+  text-align: center;
   padding: 0;
-  margin: 5px 0;
 }
 
 .list a {
