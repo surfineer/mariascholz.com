@@ -4,7 +4,7 @@ body {
   margin: 0.5;
   background-color: black;
   color: white; /* Set the color of the text to make it visible on the background */
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Quicksand', sans-serif;
   text-align: center;
   background-image: url(background.jpg);
 }
