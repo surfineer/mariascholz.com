@@ -1,32 +1,37 @@
 body {
   height: 100%; /* 100% height, ensuring that the content will be contained within the viewport. */
-  padding: 0;
+  padding: 2px;
   margin: 0.5;
-  background-color: black;
+  /* background-color: #0a0112; */
   color: white; /* Set the color of the text to make it visible on the background */
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Yantramanav', sans-serif;
   text-align: center;
-  /*background-image: url(background.jpg);*/
+  justify-content: center;
+  background-image: url(/static/backgrounds/beach_blurred.jpg);
 }
 
-header {
-  display: flex; /*property creates a flex container*/
-  flex-direction: column; /*stacks the content of this class underneath*/
-  justify-content: center;
-  align-items: center; /*center the content both horizontally and vertically within the container*/
-  height: 30vh; /* This ensures the element takes up the full height of the viewport making it vertically centered.*/
-  background-size: cover;
-  background-position: center;
-  font-size: 2vw;
-  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+nav {
+  background-color: rgba(255,228,196,0.3);
+  }
+
+nav ul {
+  list-style-type: none;
+  display: table;
+}
+
+nav li {
+  display: table-cell;
+  padding: 15px
 }
 
 a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
 footer {
   margin-top: 10vw;
   font-size: 10px;
+  color: #0a0112;
 }
