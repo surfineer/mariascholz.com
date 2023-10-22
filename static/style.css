@@ -1,41 +1,99 @@
-body {
-  height: 100%; /* 100% height, ensuring that the content will be contained within the viewport. */
-  padding: 2px;
-  margin: 0.5;
-  /* background-color: #0a0112; */
-  color: white; /* Set the color of the text to make it visible on the background */
-  font-family: 'Yantramanav', sans-serif;
-  text-align: center;
-  background-image: url(/static/backgrounds/beach_blurred.jpg);
-  background-size: cover;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between;
+body {
+  background-color: #0a0112;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* default */
+  font-family: 'Asap Condensed', sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.03em;
+}
+
+p {
+  margin-bottom: 1.002em;
 }
 
 nav {
+  margin: 15px 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.top-name {
+  font-size: 6rem;
+  font-family: 'Neonderthaw', cursive;
+  font-weight: lighter;
+  margin-bottom: 12px;
+}
+
+.first-letter {
+  font-size: 1.5em;
+}
+
+.top-title {
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+#banner {
+  background-image: url("backgrounds/dalle_staircase.png");
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+
+#intro {
+  margin: auto 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#container-left {
+  max-height: 600px;
+}
+
+#portrait {
+  border-radius: 1.5%;
+}
+
+#container-right {
+  padding: 9px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.tool-list{
+  margin: 13px 0;
+}
+
+.navbar {
   background-color: rgba(255,228,196,0.3);
-  height: 300px;
-  /*most important CSS stuff*/
+  font-size: 2.5rem;
+  text-transform: uppercase;  
   display: flex; /*always*/
-  justify-content: space-between; /*center is nicest, space-between*/
+  justify-content: center; /*center or space-between*/
   align-items: start; /*start, center, end*/
   flex-direction: row; /*row by default, row-reverse*/
   flex-wrap: wrap; /*nowrap by default, generally wrap*/
   gap: 2.5rem;
-  /*most important CSS stuff, border, padding, margin*/
   padding: 1rem;
-  border: 1px solid black;
-  border-radius: 50%;
+  list-style: none;
   }
 
-.profile {
-  width: 10rem; 
-  height: auto;
-  border-radius: 50%;
-  border: 2px solid white;
+.navbar li:hover {
+  background-color: black;
+  border-radius: 40%;
 }
 
 a {
@@ -45,11 +103,9 @@ a {
 }
 
 footer {
-  margin-top: 10vw;
-  font-size: 10px;
-  color: #0a0112;
+  margin: 8px 5px;
+  font-size: 13px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 8rem;
 }
