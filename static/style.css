@@ -57,14 +57,16 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
-#container-left {
-  max-height: 600px;
+.container {
+  flex: 1;
 }
 
 #portrait {
   border-radius: 1.5%;
+  max-height: 600px;
 }
 
 #container-right {
@@ -79,7 +81,7 @@ li {
 
 .navbar {
   background-color: rgba(255,228,196,0.3);
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-transform: uppercase;  
   display: flex; /*always*/
   justify-content: center; /*center or space-between*/
@@ -91,9 +93,13 @@ li {
   list-style: none;
   }
 
-.navbar li:hover {
-  background-color: black;
-  border-radius: 40%;
+.navbar li a {
+  box-sizing: border-box;
+}
+
+.navbar li a:hover {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 a {
