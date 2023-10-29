@@ -1,6 +1,10 @@
+/* --------------- Global Styles --------------- */
+
 * {
+  box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  margin: 0; /*
+  border: 1px solid red !important; */
 }
 
 body {
@@ -20,22 +24,30 @@ p {
   margin-bottom: 1.002em;
 }
 
-nav {
-  margin: 15px 0;
-}
-
 li {
   margin: 10px 0;
+  list-style-type: none;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --------------- Top Elements --------------- */
 
 .top-name {
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: 'Neonderthaw', cursive;
-  font-weight: lighter;
+  font-weight:lighter;
   margin-bottom: 12px;
+  text-wrap: pretty;
+  display: inline-block;
+  filter: drop-shadow(9px 6px 3px white);
 }
 
-.first-letter {
+header h1::first-letter {
   font-size: 1.5em;
 }
 
@@ -47,51 +59,35 @@ li {
 
 #banner {
   background-image: url("backgrounds/dalle_staircase.png");
-  height: 400px;
+  height: 500px;
   background-position: center;
   background-size: cover;
 }
 
-#intro {
-  margin: auto 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
+/* --------------- navbar --------------- */
 
-.container {
-  flex: 1;
-}
-
-#portrait {
-  border-radius: 1.5%;
-  max-height: 600px;
-}
-
-#container-right {
-  padding: 9px;
-  text-align: left;
-  margin-left: 30px;
-}
-
-.tool-list{
-  margin: 13px 0;
+nav {
+  margin: 15px 0;
 }
 
 .navbar {
-  background-color: rgba(255,228,196,0.3);
+  background-color: rgba(255, 228, 196, 0.3);
   font-size: 2rem;
-  text-transform: uppercase;  
-  display: flex; /*always*/
-  justify-content: center; /*center or space-between*/
-  align-items: start; /*start, center, end*/
-  flex-direction: row; /*row by default, row-reverse*/
-  flex-wrap: wrap; /*nowrap by default, generally wrap*/
+  text-transform: uppercase;
+  display: flex;
+  /*always*/
+  justify-content: center;
+  /*center or space-between*/
+  align-items: start;
+  /*start, center, end*/
+  flex-direction: row;
+  /*row by default, row-reverse*/
+  flex-wrap: wrap;
+  /*nowrap by default, generally wrap*/
   gap: 2.5rem;
   padding: 1rem;
   list-style: none;
-  }
+}
 
 .navbar li a {
   box-sizing: border-box;
@@ -102,16 +98,47 @@ li {
   border-bottom: 3px solid white;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+/* --------------- Body Elements --------------- */
+
+#intro {
+  margin: auto 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
-footer {
+#intro .right-container {
+  text-align: left;
+  padding: 1rem 1rem;
+}
+
+#portrait {
+  border-radius: 1.5%;
+}
+
+/* --------------- Bottom Elements --------------- */
+
+#social-media {
+  margin-top: 30px;
   margin: 8px 5px;
   font-size: 13px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#social-media ul li {
+  display: inline;
+}
+
+#social-media ul li:hover {
+  filter: drop-shadow(1px 1px 1px white);
+}
+
+footer small {
+  text-align: left;
+  display: block;
+  margin: 1.2rem 0.5rem;
 }
