@@ -1,116 +1,192 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
-  
-<head>
-  <!-- meta tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-  <meta name="author" content="Maria Scholz">
-  <meta name="description" content="Maria Scholz' is a Software Engineer and Web Developer. This Portfolio page showcases her skills and projects and contact information.">
-  <meta name="keywords" content="Maria Scholz, Portfolio, Web Development, Software Engineering">
-  <meta name="theme-color" content="#0a0112">
-  <!-- TITLE -->
-  <title>Maria Scholz | Web Developer & Software Engineer</title>
-  <!-- icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <!-- FONTS-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;400;500;600;700&display=swap" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="static/style.css" type="text/css">
-</head>
+    <head>
+        <!-- meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Maria Scholz">
+        <meta name="description" content="Maria Scholz is a Software Engineer and Web Developer. This Portfolio page showcases her skills, projects and experience.">
+        <meta name="keywords" content="Maria Scholz, Web Development, Software Engineering, Full Stack, Web Developer, Front End Developer">
+        <!-- TITLE -->
+        <title>Maria Scholz | Web Developer</title>
+        <!-- icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <!-- FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="static/style.css" type="text/css">
+    </head>
+    <body>
+        <div class="content-wrapper">                
+                <header>
+                    <h1><span>Maria</span> Scholz</h1>
+                    <h2>Software&nbsp; Engineer & Web&nbsp;Developer</h2>
+                </header>
+                
+                <nav>
+                    <ol>
+                        <li><a href="#about">about me</a></li>
+                        <li><a href="#projects">my projects</a></li>
+                        <li><a href="#skills">skills</a></li>
+                        <li><a href="#experience">work experience</a></li>
+                        <li><a href="#education">education</a></li>
+                    </ol>
+                </nav>
 
-<body>
-  <header>
-    <section id="name-title">
-      <h1 class="top-name"><a href="/">Maria</a></h1>
-      <h1 class="top-name"><a href="/">Scholz</a></h1>
-      <h2 class="top-title">Web&nbsp;Developer | Software&nbsp;Engineer</h2>
-    </section>
-    <div id="banner"></div>
-    <div id="dynamic-stack">
-      <h3>my stack</h3>
-      <p>python flask pandas HTML CSS</p> <!-- build some dynamic display -->
-    </div>
-    <nav aria-label="main menu">
-      <ol class="navbar">
-        <li><a href="#about">about me</a></li>
-        <li><a href="#projects">my projects</a></li>
-        <li><a href="#skills">skills</a></li>
-        <li><a href="#experience">work experience</a></li>
-        <li><a href="#education">education</a></li>
-      </ol>
-    </nav>
-  </header>
-  <main>
-    <section id="intro" aria-label="introduction">
-        <div class="left-container">
-          <picture class="portrait"> <!-- does not work, need to make it scale with two different pictures -->
-            <source media="(width:752px)" srcset="static/images/square_cut.jpg">
-            <source media="(width:934px)" srcset="static/images/long_cut.jpg">
-            <img id="portrait" src="static/images/square_cut.jpg" alt="Maria Scholz sitting in a chair, smiling">
-          </picture>
-        </div>
-        <div class="right-container">
-          <h2>Welcome to my Portfolio!</h2>
-          <p>I currently work as a Software Engineer for in-house automation projects at a big semiconductor-supplier company. However, my passion is Web Development and I am currently on a journey to become a Full-Stack Developer.</p> 
-          <p>Make sure to check in again later, as I am ramping up my skill set and portfolio!</p>
-          <p><b>I love building websites!</b> If you have a website project, I would be delighted to build it! <sub>(for free😉)</sub></p>
-          <p>Thank you for visiting! And watch this space - as I keep advancing...</p>
-        </div>
-    </section>
-    <section id="about" aria-label="about me">
-      <h2>About Me</h2>
-    <!--  Maybe take the test again? 
-          Make the Letters expand when hovering over them, with their full description, eg. "J" -> "Judging" -->  
-      <p>My personality type is <a href="https://www.16personalities.com/istj-personality">"ISTJ-A"</a>, which means that I am a fact-focused, practical person. I am a good listener and very attentive to details.</p>
-      <p>Sometimes however, I can really lose myself in work and forget that I am human. In order to keep that work-life balance, I go <em>Surfing</em>, do <em>Yoga</em> and <em>meditate</em>.</p>
-    </section>
-    <section id="projects" aria-label="projects">
-      <h2>Projects</h2>
-    </section>
-    <section id="skills" aria-label="skills">
-      <h2>Skills</h2>
-    </section>
-    <section id="experience" aria-label="work experience">
-      <h2>Work Experience</h2>
-      <ol>
-        <li id="Toppan-FEDEV"></li>
-        <li id="Toppan-CS"></li>
-        <li id="Schuetze"></li>
-        <li id="TEL"></li>
-        <li id="Google"></li>
-      </ol>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <ol>
-        <li id="Codecademy"></li>
-        <li id="Linkedin"></li>
-        <li id="replit"></li>
-        <li id="UoE"></li>
-      </ol>
-    </section>
-  </main>
-  <footer>
-    <div id="social-media">
-      <ul>
-        <li><a href="https://www.linkedin.com/in/maria-scholz/" target="_blank"><img src="static/svgs/icons8-linkedin_contrast.svg" alt="linkedin icon"></a></li>
-        <li><a href="https://github.com/surfineer" target="_blank"><img src="static/svgs/icons8-github_contrast.svg" alt="github icon"></a></li>
-        <li><a href="https://replit.com/@surfineer" target="_blank"><img src="static/svgs/icons8-replit_contrast.svg" alt="replit icon"></a></li>
-        <li><a href="https://instagram.com/maria_remote" target="_blank"><img src="static/svgs/icons8-instagram_contrast.svg" alt="instagram icon"></a></li>
-        <li><a href="https://twitter.com/maria_remote" target="_blank"><img src="static/svgs/icons8-twitter_contrast.svg" alt="twitter x icon"></a></li>
-      </ul>
-    </div>
-    
-    <small>&copy; 2023 | Maria Scholz</small>
-    
-  </footer>
-</body>
+                <main>
+                    <section id="about">
+                        <div class="floats">
+                            <img id="profile-pic" src="static/images/profile_photo.JPG" alt="profile picture" height="200px">
+                            <p>After an extensive background in <b>Customer Service</b> and <b>Project Management</b> I decided to take the leap and transition my career into the realms of Software & Web Development. I now work as a <b>Software Engineer</b> for in-house Automation Solutions and Process Optimizations for an international semiconductor supplier company. However, my passion is <b>Web Development</b> and I am open for new opportunities while I keep growing my skill set.</p>
+                            <p>I am self-taught with a strong desire to try new projects, discover problems and find innovative ways to solve them. My work ethics are grounded in a belief that <b>'everything is figure-out-able'</b>. I learn fast, apply knowledge practically and understand the power of collaboration.</p>
+                            <p>My second passion in life is <b>Surfing</b>, which is the perfect balance for me (along with Yoga and Meditation) after spending hours in front of the computer. Check out my surf blog at <a href="//https:www.surfineer.com">Surfineer.com</a>!</p>
+                        </div>
+                        <aside class="hidden">My Stack: Python HTML CSS Flask</aside>
+                    </section>
+                    
+                    <section id="projects">
+                        <h3>Projects</h3>
+                        <ul>
+                            <li>Daily Wisdom</li>
+                            <li>Today in Japanese</li>
+                            <li>Count Down</li>
+                        </ul>
+                    </section>
 
+                    <section id="skills">
+                        <h3>Skills</h3>
+                        <h4>Soft (Human) Skills</h4>
+                        <ul>
+                            <li>Strategic Problem Solving</li>
+                            <li>Adabtability</li>
+                            <li>Priority Management</li>
+                            <li>Self-Motivation</li>
+                            <li>Curiosity</li>
+                        </ul>
+                        <h4 class="hidden">Technical Skills</h4>
+                        <h5>Programming Languages</h5>
+                        <ul>
+                            <li>Python</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <h5>Libraries & Frameworks</h5>
+                        <ul>
+                            <li>Flask</li>
+                        </ul>
+                        <h5>Tools & Platforms</h5>
+                        <ul>
+                            <li>Google Cloud Platform</li>
+                            <li>GIT, Github, Gitlab</li>
+                            <li>OpenProject</li>
+                            <li>Atlassian</li>
+                        </ul>
+                    </section>
+
+                    <section id="experience">
+                        <h3>Work Experience</h3>
+                        <ol>
+                            <li>
+                                <h4>Toppan Photomasks</h4>
+                                <p>Front End Software Development Engineer</p>
+                                <p>since Sep 2023</p>
+                                <ul>
+                                    <li>Driving process automation and continuous improvement projects to optimize data preparation and order entry procedures.</li>
+                                    <li>Finding innovative techniques to enhance workflow efficiency and adopt agile project management methodology.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Toppan Photomasks</h4>
+                                <p>Technical Customer Service Specialist</p>
+                                <p>Mar 2020 - Aug 2023</p>
+                                <ul>
+                                    <li>Streamlined product order entry and support, ensuring accuracy and timely execution.</li>
+                                    <li>Enhanced customer service by improving communication processes and troubleshooting techniques.</li>
+                                    <li>Led customer review meetings and status reporting, contributing to elevated customer satisfaction rates.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Nortal (former Schuetze)</h4>
+                                <p>IT-Project Management Assistant</p>
+                                <p>Jul 2019 - Feb 2020</p>
+                                <ul>
+                                    <li>Assisted in the establishment and optimization of project management procedures.</li>
+                                    <li>Supported both strategic and operational project activities, ensuring alignment with business goals.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Tokyo Electron</h4>
+                                <p>Sales Administrative Assistant</p>
+                                <p>Mar 2018 - Feb 2013</p>
+                                <ul>
+                                    <li>Managed international orders, ensuring compliance with supply chain and delivery schedules.</li>
+                                    <li>Played a key role in customs documentation and export control procedures.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>Google Maps</h4>
+                                <p>Data Quality Evaluator</p>
+                                <p>Mar 2010 - Feb 2013</p>
+                                <ul>
+                                    <li>Performed data analysis and content evaluation to enhance the accuracy of Google Maps.</li>
+                                    <li>Participated in global projects aimed at optimizing search results and map display functionality.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section id="education">
+                        <h3>Education & Resources</h3>
+                        <ol>
+                            <li>
+                                <h4>Linkedin Learning</h4>
+                                <p>70+ courses</p>
+                                <p>since Oct 2020</p>
+                            </li>
+                            <li>
+                                <h4>Codecademy</h4>
+                                <p>Full-Stack Engineer Career Path</p>
+                                <p>since Sep 2023</p>
+                            </li>
+                            <li>
+                                <h4>Data Camp</h4>
+                                <p>Python Programmer Track</p>
+                                <p>since Sep 2023</p>
+                            </li>
+                            <li>
+                                <h4>Replit</h4>
+                                <p>90 Days of Code (Python)</p>
+                                <p>Dec 2022 - Apr 2023</p>
+                            </li>
+                            <li>
+                                <h4>University of Edinburgh</h4>
+                                <p>BSc Environmental Science & Ecology</p>
+                                <p>Sep 2013 - May 2016</p>
+                            </li>
+                        </ol>
+                    </section>
+                </main>
+            
+            <footer>
+                <div id="social-media">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/maria-scholz/" target="_blank"><img src="static/svgs/icons8-linkedin_contrast.svg" alt="linkedin icon"></a></li>
+                    <li><a href="https://github.com/surfineer" target="_blank"><img src="static/svgs/icons8-github_contrast.svg" alt="github icon"></a></li>
+                    <li><a href="https://replit.com/@surfineer" target="_blank"><img src="static/svgs/icons8-replit_contrast.svg" alt="replit icon"></a></li>
+                    <li><a href="https://instagram.com/maria_remote" target="_blank"><img src="static/svgs/icons8-instagram_contrast.svg" alt="instagram icon"></a></li>
+                    <li><a href="https://twitter.com/maria_remote" target="_blank"><img src="static/svgs/icons8-twitter_contrast.svg" alt="twitter x icon"></a></li>
+                </ul>
+                </div>
+                
+                <small>&copy; 2023 | Maria Scholz</small>
+            </footer>
+
+        </div>
+    </body>
 </html>
