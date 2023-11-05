@@ -1,0 +1,147 @@
+/* --------------- Global Styles --------------- */
+
+/*
+* { 
+  border: 1px solid red !important; 
+}
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: #0a0112;
+  color: white;
+  font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
+  text-align: center;
+  font-size: 1.3rem;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.03em;
+}
+
+p {
+  margin-bottom: 1.002em;
+}
+
+li {
+  margin: 10px 0;
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --------------- Top Elements --------------- */
+
+.top-name {
+  font-size: 5rem;
+  font-family: 'Neonderthaw', cursive;
+  font-weight:lighter;
+  margin-bottom: 12px;
+  text-wrap: pretty;
+  display: inline-block;
+  filter: drop-shadow(9px 6px 3px white);
+}
+
+header h1::first-letter {
+  font-size: 1.5em;
+}
+
+.top-title {
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 20px;
+}
+
+#banner {
+  background-image: url("backgrounds/dalle_staircase.png");
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+/* --------------- navbar --------------- */
+
+nav {
+  margin: 15px 0;
+}
+
+.navbar {
+  background-color: rgba(255, 228, 196, 0.3);
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  /*always*/
+  justify-content: center;
+  /*center or space-between*/
+  align-items: start;
+  /*start, center, end*/
+  flex-direction: row;
+  /*row by default, row-reverse*/
+  flex-wrap: wrap;
+  /*nowrap by default, generally wrap*/
+  gap: 2.5rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.navbar li a {
+  box-sizing: border-box;
+}
+
+.navbar li a:hover {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+/* --------------- Body Elements --------------- */
+
+#intro {
+  margin: auto 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+#intro .right-container {
+  text-align: left;
+  padding: 1rem 1rem;
+}
+
+#portrait {
+  border-radius: 1.5%;
+}
+
+/* --------------- Bottom Elements --------------- */
+
+#social-media {
+  margin-top: 30px;
+  margin: 8px 5px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#social-media ul li {
+  display: inline;
+}
+
+#social-media ul li:hover {
+  filter: drop-shadow(1px 1px 1px white);
+}
+
+footer small {
+  text-align: left;
+  display: block;
+  margin: 1.2rem 0.5rem;
+}

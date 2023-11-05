@@ -1,144 +1,165 @@
+/* --------------- Color Palette ---------------
+
+--eerie-black: hsla(37, 21%, 12%, 1);           
+--drab-dark-brown: hsla(41, 32%, 25%, 1);       footer
+--brown-sugar: hsla(20, 49%, 56%, 1);
+--sage: hsla(64, 34%, 59%, 1);                  navbar
+--bone: hsla(49, 25%, 83%, 1);                  background
+
+--eerie-black: #262119ff;
+--drab-dark-brown: #53462bff;
+--brown-sugar: #c57b57ff;
+--sage: #b5ba72ff;
+--bone: #dfdbcaff;
+
+*/
+
 /* --------------- Global Styles --------------- */
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0; /*
-  border: 1px solid red !important; */
+    /* border: 1px solid red !important; */
+    box-sizing: border-box;
 }
-
+body::before {
+    background: url(backgrounds/dalle_staircase_3.png) no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
 body {
-  background-color: #0a0112;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; /* default */
-  font-family: 'Asap Condensed', sans-serif;
-  text-align: center;
-  font-size: 1.3rem;
-  }
-
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 1.03em;
+    margin: 0;
+    font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
+    letter-spacing: 0.04em;
 }
-
-p {
-  margin-bottom: 1.002em;
+header, main {
+    padding: 0 7px;
 }
-
 li {
-  margin: 10px 0;
-  list-style-type: none;
+    list-style: none;
 }
-
 a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    color: #262119ff;
+}
+a:hover {
+    text-shadow: 1px 0px 3px #c57b57ff;
+}
+.hidden { /* to keep semantic flow but not (yet) relevant for style */
+    visibility: hidden;
+}
+.content-wrapper {
+    margin: 0 auto;
+    background-color: hsla(49, 25%, 83%, 0.8);
+    width: 80%;
+    border-radius: 0.5%;
 }
 
-/* --------------- Top Elements --------------- */
+/* --------------- Header --------------- */
 
-.top-name {
-  font-size: 5rem;
-  font-family: 'Neonderthaw', cursive;
-  font-weight:lighter;
-  margin-bottom: 12px;
-  text-wrap: pretty;
-  display: inline-block;
-  filter: drop-shadow(9px 6px 3px white);
+header {
+    text-align: center;
+}
+header h1 {
+    font-size: 3rem;
+    padding: 10px;
+    margin-bottom: -0.2em;
+}
+header h1 span {                                /* do something funky with it!*/
+    font-weight: bolder;
 }
 
-header h1::first-letter {
-  font-size: 1.5em;
+/* --------------- Nav --------------- */
+
+@media screen and (max-width: 600px) {
+    nav ol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin: 6px 0;
+    }
 }
-
-.top-title {
-  font-weight: 700;
-  font-size: 3rem;
-  padding: 20px;
-}
-
-#banner {
-  background-image: url("backgrounds/dalle_staircase.png");
-  height: 500px;
-  background-position: center;
-  background-size: cover;
-}
-
-/* --------------- navbar --------------- */
-
 nav {
-  margin: 15px 0;
+    background-color: #b5ba72ff;
+    padding: 1% 0;
+    margin: 3% 0;
+}
+nav ol {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 12px;
+    margin: 0;
+}
+nav li a {
+    box-sizing: border-box;
+    color: #262119ff;
+    padding: 4px;
+    text-transform: uppercase;
+}
+nav li a:hover {
+    border-top: 2px solid #262119ff;
+    border-bottom: 2px solid #262119ff;
 }
 
-.navbar {
-  background-color: rgba(255, 228, 196, 0.3);
-  font-size: 2rem;
-  text-transform: uppercase;
-  display: flex;
-  /*always*/
-  justify-content: center;
-  /*center or space-between*/
-  align-items: start;
-  /*start, center, end*/
-  flex-direction: row;
-  /*row by default, row-reverse*/
-  flex-wrap: wrap;
-  /*nowrap by default, generally wrap*/
-  gap: 2.5rem;
-  padding: 1rem;
-  list-style: none;
+/* --------------- Main --------------- */
+
+/* --------------- Section: About --------------- */
+
+.floats {
+    display: flow-root;
 }
 
-.navbar li a {
-  box-sizing: border-box;
+.floats img {
+    float: left;
+}
+.floats p:first-child {                                     /* NOT WORKING!? */
+    margin: 0;
+}
+#profile-pic {
+    border-radius: 50%;
+    border: 1px solid #c57b57ff;
+    margin: 5px 12px;
+}
+#about aside {                      /* JS animation needs to be applied here! */
+    /* display:none; */
+    visibility: hidden;
 }
 
-.navbar li a:hover {
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
+/* --------------- Section: Projects --------------- */
+
+/* --------------- Section: Skills --------------- */
+
+/* --------------- Section: Work Experience --------------- */
+
+/* --------------- Section: Education --------------- */
+
+/* --------------- Footer --------------- */
+
+footer {
+    background-color: #262119ff;
+    color: white;
 }
-
-/* --------------- Body Elements --------------- */
-
-#intro {
-  margin: auto 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+#social-media ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
-#intro .right-container {
-  text-align: left;
-  padding: 1rem 1rem;
+#social-media li{
+    margin: 6px;
 }
-
-#portrait {
-  border-radius: 1.5%;
+#social-media li:hover {
+    filter: drop-shadow(1px 1px 1px white);
 }
-
-/* --------------- Bottom Elements --------------- */
-
-#social-media {
-  margin-top: 30px;
-  margin: 8px 5px;
-  font-size: 13px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#social-media ul li {
-  display: inline;
-}
-
-#social-media ul li:hover {
-  filter: drop-shadow(1px 1px 1px white);
-}
-
-footer small {
-  text-align: left;
-  display: block;
-  margin: 1.2rem 0.5rem;
+small {
+    display: block;
+    text-align: center;
+    padding: 7px
 }
