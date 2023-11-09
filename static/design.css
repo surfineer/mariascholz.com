@@ -1,0 +1,87 @@
+/* --------------- Color Palette ---------------
+
+--eerie-black: hsla(37, 21%, 12%, 1);           text, footer
+--drab-dark-brown: hsla(41, 32%, 25%, 1);       
+--brown-sugar: hsla(20, 49%, 56%, 1);
+--sage: hsla(64, 34%, 59%, 1);                  navbar
+--bone: hsla(49, 25%, 83%, 1);                  background
+
+--eerie-black: #262119ff;
+--drab-dark-brown: #53462bff;
+--brown-sugar: #c57b57ff;
+--sage: #b5ba72ff;
+--bone: #dfdbcaff;
+
+*/
+
+/* --------------- Global Styles --------------- */
+
+* {
+    /* border: 1px solid red !important; */
+    box-sizing: border-box;
+}
+body {
+    padding-left: 18px;
+    font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
+    letter-spacing: 0.04em;
+}
+section {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 13px 0;
+}
+section div {
+    padding: 12px;
+}
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.eerie-black {
+    background-color: #262119FF;
+    color: white;
+}
+.dark-brown {
+    background-color: #53462BFF;
+    color: white;
+}
+.brown-sugar {
+    background-color: #C57B57FF;
+}
+.sage {
+    background-color: #B5BA72FF;
+}
+.bone {
+    background-color: #DFDBCAFF;
+}
+.asap-condensed {
+    font-family: "Asap Condensed";
+}
+.give-you-glory {
+    font-family: "Give You Glory";
+}
+.croissant-one {
+    font-family: "Croissant One";
+}
+.quicksand {
+    font-family: "Quicksand";
+}
+.p200 {
+    font-weight: 200;
+}
+.p300 {
+    font-weight: 300;
+}
+.p400 {
+    font-weight: 400;
+}
+.p500 {
+    font-weight: 500;
+}
+.p600 {
+    font-weight: 600;
+}
+.p700 {
+    font-weight: 700;
+}

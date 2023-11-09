@@ -1,7 +1,7 @@
 /* --------------- Color Palette ---------------
 
---eerie-black: hsla(37, 21%, 12%, 1);           
---drab-dark-brown: hsla(41, 32%, 25%, 1);       footer
+--eerie-black: hsla(37, 21%, 12%, 1);           text, footer
+--drab-dark-brown: hsla(41, 32%, 25%, 1);       
 --brown-sugar: hsla(20, 49%, 56%, 1);
 --sage: hsla(64, 34%, 59%, 1);                  navbar
 --bone: hsla(49, 25%, 83%, 1);                  background
@@ -35,8 +35,9 @@ body {
     font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
     letter-spacing: 0.04em;
 }
-header, main {
-    padding: 0 7px;
+main {
+    padding: 0 2%;
+    margin: 2% 0;
 }
 li {
     list-style: none;
@@ -50,13 +51,22 @@ a:hover {
     text-shadow: 1px 0px 3px #c57b57ff;
 }
 .hidden { /* to keep semantic flow but not (yet) relevant for style */
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 .content-wrapper {
     margin: 0 auto;
     background-color: hsla(49, 25%, 83%, 0.8);
     width: 80%;
     border-radius: 0.5%;
+}
+section h3 {
+    padding: 2% 0;
+    /* background-color: hsla(41, 32%, 25%, 0.3); */
+    border-bottom: dotted 2px gray;
+}
+ol {
+    padding-left: 0;
 }
 
 /* --------------- Header --------------- */
@@ -65,12 +75,20 @@ header {
     text-align: center;
 }
 header h1 {
-    font-size: 3rem;
-    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Croissant One", serif;
+    font-size: 4rem;
+    padding: 2%;
     margin-bottom: -0.2em;
 }
 header h1 span {                                /* do something funky with it!*/
     font-weight: bolder;
+}
+
+header h2 {
+    font-size: 2rem;
+    padding: 2%;
+    margin: 2% 0;
 }
 
 /* --------------- Nav --------------- */
@@ -107,8 +125,6 @@ nav li a:hover {
     border-bottom: 2px solid #262119ff;
 }
 
-/* --------------- Main --------------- */
-
 /* --------------- Section: About --------------- */
 
 .floats {
@@ -127,15 +143,64 @@ nav li a:hover {
     margin: 5px 12px;
 }
 #about aside {                      /* JS animation needs to be applied here! */
-    /* display:none; */
-    visibility: hidden;
+    display:none;
+
 }
 
 /* --------------- Section: Projects --------------- */
 
+.project-grid {
+    padding: 0 2%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5% 2%;
+}
+.project-grid li {
+    background-color: hsla(64, 34%, 59%, 0.6);
+    border-radius: 11%;
+    padding: 0.5em;
+    padding-top: 0.8em;
+    font-family: "Give You Glory";
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
 /* --------------- Section: Skills --------------- */
 
+.stack-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+}
+@media screen and (max-width: 840px) {
+    .stack-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .stack-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.stack-item:first-child {               /* why are my :first-childs not working!? */
+    font-size: 18px;
+}
+
 /* --------------- Section: Work Experience --------------- */
+
+.job-title {
+    font-size: 1.3em;
+    text-shadow: 1px 2px 2px #c57b57ff;
+}
+#experience ul li {
+    list-style: disc;
+    width: 60%;
+}
+
 
 /* --------------- Section: Education --------------- */
 
@@ -162,4 +227,22 @@ small {
     display: block;
     text-align: center;
     padding: 7px
+}
+
+#design-link {
+    width: 120px;
+    position: absolute;
+    right: 110px;
+    background-color: hsla(64, 34%, 59%, 1);
+    color: #53462bff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.64rem;
+    text-wrap: pretty;
+    text-align: center;
+    font-family: 'Quicksand', Tahoma, sans-serif;
+    font-weight: 300;
+}
+#design-link:hover {
+    text-shadow: 1px 0px 3px #262119ff;
 }
