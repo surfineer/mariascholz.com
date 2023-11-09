@@ -1,23 +1,6 @@
-/* --------------- Color Palette ---------------
-
---eerie-black: hsla(37, 21%, 12%, 1);           text, footer
---drab-dark-brown: hsla(41, 32%, 25%, 1);       
---brown-sugar: hsla(20, 49%, 56%, 1);
---sage: hsla(64, 34%, 59%, 1);                  navbar
---bone: hsla(49, 25%, 83%, 1);                  background
-
---eerie-black: #262119ff;
---drab-dark-brown: #53462bff;
---brown-sugar: #c57b57ff;
---sage: #b5ba72ff;
---bone: #dfdbcaff;
-
-*/
-
-/* --------------- Global Styles --------------- */
+/* --------------- Global --------------- */
 
 * {
-    /* border: 1px solid red !important; */
     box-sizing: border-box;
 }
 body {
@@ -35,9 +18,15 @@ section div {
 }
 .wrapper {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
+.wrapper div {
+    margin: 13px 10px;
+}
+
+/* --------------- Colors --------------- */
+
 .eerie-black {
     background-color: #262119FF;
     color: white;
@@ -55,6 +44,9 @@ section div {
 .bone {
     background-color: #DFDBCAFF;
 }
+
+/* --------------- Fonts --------------- */
+
 .asap-condensed {
     font-family: "Asap Condensed";
 }

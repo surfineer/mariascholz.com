@@ -230,19 +230,17 @@ small {
 }
 
 #design-link {
-    width: 120px;
-    position: absolute;
-    right: 110px;
+    float: right;
+    position: relative;
+    bottom: 32px;
+    right: 12px;
     background-color: hsla(64, 34%, 59%, 1);
-    color: #53462bff;
+    color: #262119ff;
     padding: 5px;
     border-radius: 5px;
-    font-size: 0.64rem;
+    font-size: 0.7rem;
     text-wrap: pretty;
     text-align: center;
     font-family: 'Quicksand', Tahoma, sans-serif;
-    font-weight: 300;
-}
-#design-link:hover {
-    text-shadow: 1px 0px 3px #262119ff;
+    font-weight: 400;
 }
