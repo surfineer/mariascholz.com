@@ -17,7 +17,6 @@
 /* --------------- Global Styles --------------- */
 
 * {
-    /* border: 1px solid red !important; */
     box-sizing: border-box;
 }
 body::before {
@@ -50,7 +49,7 @@ a {
 a:hover {
     text-shadow: 1px 0px 3px #c57b57ff;
 }
-.hidden { /* to keep semantic flow but not (yet) relevant for style */
+.hidden { /* to keep semantic flow but not relevant for style */
     /* visibility: hidden; */
     display: none;
 }
@@ -62,7 +61,6 @@ a:hover {
 }
 section h3 {
     padding: 2% 0;
-    /* background-color: hsla(41, 32%, 25%, 0.3); */
     border-bottom: dotted 2px gray;
 }
 ol {
@@ -81,7 +79,7 @@ header h1 {
     padding: 2%;
     margin-bottom: -0.2em;
 }
-header h1 span {                                /* do something funky with it!*/
+header h1 span {                                            /* TODO: do something funky with it!*/
     font-weight: bolder;
 }
 
@@ -134,7 +132,7 @@ nav li a:hover {
 .floats img {
     float: left;
 }
-.floats p:first-child {                                     /* NOT WORKING!? */
+.floats p:first-child {                                     /* TODO: First-Child NOT WORKING!? */
     margin: 0;
 }
 #profile-pic {
@@ -142,7 +140,7 @@ nav li a:hover {
     border: 1px solid #c57b57ff;
     margin: 5px 12px;
 }
-#about aside {                      /* JS animation needs to be applied here! */
+#about aside {                                              /* TODO: JS animation needs to be applied here! */
     display:none;
 
 }
@@ -186,7 +184,7 @@ nav li a:hover {
         align-items: center;
     }
 }
-.stack-item:first-child {               /* why are my :first-childs not working!? */
+.stack-item:first-child {                                   /* TODO: why are my :first-childs not working!? */
     font-size: 18px;
 }
 
@@ -203,6 +201,31 @@ nav li a:hover {
 
 
 /* --------------- Section: Education --------------- */
+                                                            /* TODO: improve this toggle behavior using hidden checkbox input*/
+.collapse li {
+    height: 50px;
+    overflow: hidden;
+    padding: 0 10px;
+    text-align: center;
+}
+.collapse li p:first-child {                                /* TODO: 1st child not working*/
+    font-weight: bold;
+}
+.collapse li:active {
+    height: auto;
+}
+.collapse li:hover {
+    background-color: #dfdbcaff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.collapse h4 {
+    margin-top: 4%;
+}
+.collapse h4:hover {
+    text-shadow: 1px 0px 3px #c57b57ff;
+}
+
 
 /* --------------- Footer --------------- */
 
