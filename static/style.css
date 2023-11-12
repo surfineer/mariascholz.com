@@ -1,3 +1,6 @@
+/* TODO: refeactor classes names and style structuring */
+
+
 /* --------------- Color Palette ---------------
 
 --eerie-black: hsla(37, 21%, 12%, 1);           text, footer
@@ -128,21 +131,22 @@ nav li a:hover {
 .floats {
     display: flow-root;
 }
-
-.floats img {
-    float: left;
+.floats p {
+    margin: 0 1% 2%;
+    padding: 0;
 }
-.floats p:first-child {                                     /* TODO: First-Child NOT WORKING!? */
+/* .floats p:first-child {
     margin: 0;
-}
+} */
 #profile-pic {
+    float: left;
     border-radius: 50%;
     border: 1px solid #c57b57ff;
-    margin: 5px 12px;
+    margin: 5px;
+    margin-right: 7%;
 }
-#about aside {                                              /* TODO: JS animation needs to be applied here! */
+#my-stack {                                              /* TODO: JS animation needs to be applied here! */
     display:none;
-
 }
 
 /* --------------- Section: Projects --------------- */
@@ -188,27 +192,48 @@ nav li a:hover {
 }
 /* --------------- Section: Skills --------------- */
 
-.stack-wrapper {
+.skill-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 3%;
 }
 @media screen and (max-width: 840px) {
-    .stack-wrapper {
+    .skill-wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 3%;
     }
 }
 @media screen and (max-width: 630px) {
-    .stack-wrapper {
+    .skill-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
     }
 }
-.stack-item:first-child {                                   /* TODO: why are my :first-childs not working!? */
-    font-size: 18px;
+.skill-item {
+    padding: 4%;
+    margin: 3%;
+    background-color: hsla(49, 25%, 83%, 0.8);
+    border: 2px solid #53462BFF;
+    border-radius: 8%;
+}
+.skill-item:hover {
+    background-color: hsla(20, 49%, 56%, 0.8);
+    color: hsla(49, 25%, 83%, 1);
+}
+.skill-category {
+    font-family: "Croissant One";
+    font-size: 0.9rem;
+}
+.skill-item ul {
+    margin: 0;
+    padding: 2% 0;
+}
+.skill-item li {
+    margin-left: 13%;
+    list-style: circle;
+    line-height: 2em;
 }
 
 /* --------------- Section: Work Experience --------------- */
