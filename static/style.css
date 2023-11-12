@@ -35,7 +35,7 @@ body::before {
 body {
     margin: 0;
     font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.04rem;
 }
 main {
     padding: 0 2%;
@@ -49,8 +49,16 @@ a {
     font-weight: bold;
     color: #262119ff;
 }
-a:hover {
+a:hover, .clickable {
     text-shadow: 1px 0px 3px #c57b57ff;
+    cursor: pointer;
+}
+section h3 {
+    padding: 2% 0;
+    border-bottom: dotted 2px gray;
+}
+ol {
+    padding-left: 0;
 }
 .hidden { /* to keep semantic flow but not relevant for style */
     /* visibility: hidden; */
@@ -62,14 +70,14 @@ a:hover {
     width: 80%;
     border-radius: 0.5%;
 }
-section h3 {
-    padding: 2% 0;
-    border-bottom: dotted 2px gray;
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
 }
-ol {
-    padding-left: 0;
+.flex-column {
+    display: flex;
+    flex-flow: column wrap;
 }
-
 /* --------------- Header --------------- */
 
 header {
@@ -155,6 +163,7 @@ nav li a:hover {
     padding: 0 2%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-content: flex-start;
     align-items: stretch;
 }
@@ -180,7 +189,7 @@ nav li a:hover {
     border-radius: 4px;
     padding: 1%;
 }
-.project-grid small, p {
+.project-grid small, .project-grid p {
     text-align: left;
     padding: 2%;
 }
@@ -275,31 +284,37 @@ nav li a:hover {
     list-style: disc;
 }
 /* --------------- Section: Education --------------- */
-                                                            /* TODO: improve this toggle behavior using hidden checkbox input*/
-.collapse li {
-    height: 50px;
-    overflow: hidden;
-    padding: 0 10px;
+
+.education-item {
     text-align: center;
+    margin: 1%;
+    padding: 1%;
 }
-.collapse li p:first-child {                                /* TODO: 1st child not working*/
-    font-weight: bold;
+.education-item h4 {
+    margin: 1%;
+    font-size: 1.2rem;
 }
-.collapse li:active {
-    height: auto;
-}
-.collapse li:hover {
+.education-item:hover {
     background-color: #dfdbcaff;
     border-radius: 5px;
     cursor: pointer;
 }
-.collapse h4 {
-    margin-top: 13px;
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
 }
-.collapse h4:hover {
-    text-shadow: 1px 0px 3px #c57b57ff;
+.details p {
+    margin: 1.5% 0;
+    font-weight: bold;
 }
-
+.details small {
+    font-size: 0.8rem;
+    margin: 1% 0;
+}
+.toggle:checked~.details {
+    max-height: 100%;
+}
 
 /* --------------- Footer --------------- */
 
@@ -320,16 +335,10 @@ footer {
 #social-media li:hover {
     filter: drop-shadow(1px 1px 1px white);
 }
-small {
-    display: block;
-    text-align: center;
-    padding: 7px
-}
-
 #design-link {
     float: right;
     position: relative;
-    bottom: 32px;
+    bottom: 44px;
     right: 12px;
     background-color: hsla(64, 34%, 59%, 1);
     color: #262119ff;
@@ -340,4 +349,9 @@ small {
     text-align: center;
     font-family: 'Quicksand', Tahoma, sans-serif;
     font-weight: 400;
+}
+.made-by {
+    padding: 1%;
+    margin: 1%;
+    display: block;
 }
