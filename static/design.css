@@ -1,0 +1,79 @@
+/* --------------- Global --------------- */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    padding-left: 18px;
+    font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
+    letter-spacing: 0.04em;
+}
+section {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 13px 0;
+}
+section div {
+    padding: 12px;
+}
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.wrapper div {
+    margin: 13px 10px;
+}
+
+/* --------------- Colors --------------- */
+
+.eerie-black {
+    background-color: #262119FF;
+    color: white;
+}
+.dark-brown {
+    background-color: #53462BFF;
+    color: white;
+}
+.brown-sugar {
+    background-color: #C57B57FF;
+}
+.sage {
+    background-color: #B5BA72FF;
+}
+.bone {
+    background-color: #DFDBCAFF;
+}
+
+/* --------------- Fonts --------------- */
+
+.asap-condensed {
+    font-family: "Asap Condensed";
+}
+.give-you-glory {
+    font-family: "Give You Glory";
+}
+.croissant-one {
+    font-family: "Croissant One";
+}
+.quicksand {
+    font-family: "Quicksand";
+}
+.p200 {
+    font-weight: 200;
+}
+.p300 {
+    font-weight: 300;
+}
+.p400 {
+    font-weight: 400;
+}
+.p500 {
+    font-weight: 500;
+}
+.p600 {
+    font-weight: 600;
+}
+.p700 {
+    font-weight: 700;
+}

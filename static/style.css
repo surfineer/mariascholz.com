@@ -1,7 +1,10 @@
+/* TODO: refeactor classes names and style structuring */
+
+
 /* --------------- Color Palette ---------------
 
---eerie-black: hsla(37, 21%, 12%, 1);           
---drab-dark-brown: hsla(41, 32%, 25%, 1);       footer
+--eerie-black: hsla(37, 21%, 12%, 1);           text, footer
+--drab-dark-brown: hsla(41, 32%, 25%, 1);       
 --brown-sugar: hsla(20, 49%, 56%, 1);
 --sage: hsla(64, 34%, 59%, 1);                  navbar
 --bone: hsla(49, 25%, 83%, 1);                  background
@@ -17,7 +20,6 @@
 /* --------------- Global Styles --------------- */
 
 * {
-    /* border: 1px solid red !important; */
     box-sizing: border-box;
 }
 body::before {
@@ -33,10 +35,11 @@ body::before {
 body {
     margin: 0;
     font-family: 'Asap Condensed', Verdana, Tahoma, sans-serif;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.04rem;
 }
-header, main {
-    padding: 0 7px;
+main {
+    padding: 0 2%;
+    margin: 2% 0;
 }
 li {
     list-style: none;
@@ -46,11 +49,20 @@ a {
     font-weight: bold;
     color: #262119ff;
 }
-a:hover {
+a:hover, .clickable {
     text-shadow: 1px 0px 3px #c57b57ff;
+    cursor: pointer;
 }
-.hidden { /* to keep semantic flow but not (yet) relevant for style */
-    visibility: hidden;
+section h3 {
+    padding: 2% 0;
+    border-bottom: dotted 2px gray;
+}
+ol {
+    padding-left: 0;
+}
+.hidden { /* to keep semantic flow but not relevant for style */
+    /* visibility: hidden; */
+    display: none;
 }
 .content-wrapper {
     margin: 0 auto;
@@ -58,19 +70,34 @@ a:hover {
     width: 80%;
     border-radius: 0.5%;
 }
-
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-column {
+    display: flex;
+    flex-flow: column wrap;
+}
 /* --------------- Header --------------- */
 
 header {
     text-align: center;
 }
 header h1 {
-    font-size: 3rem;
-    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Croissant One", serif;
+    font-size: 4rem;
+    padding: 2%;
     margin-bottom: -0.2em;
 }
-header h1 span {                                /* do something funky with it!*/
+header h1 span {                                            /* TODO: do something funky with it!*/
     font-weight: bolder;
+}
+
+header h2 {
+    font-size: 2rem;
+    padding: 2%;
+    margin: 2% 0;
 }
 
 /* --------------- Nav --------------- */
@@ -107,37 +134,187 @@ nav li a:hover {
     border-bottom: 2px solid #262119ff;
 }
 
-/* --------------- Main --------------- */
-
 /* --------------- Section: About --------------- */
 
 .floats {
     display: flow-root;
 }
-
-.floats img {
-    float: left;
+.floats p {
+    margin: 0 1% 2%;
+    padding: 0;
 }
-.floats p:first-child {                                     /* NOT WORKING!? */
+/* .floats p:first-child {
     margin: 0;
-}
+} */
 #profile-pic {
+    float: left;
     border-radius: 50%;
     border: 1px solid #c57b57ff;
-    margin: 5px 12px;
+    margin: 5px;
+    margin-right: 7%;
 }
-#about aside {                      /* JS animation needs to be applied here! */
-    /* display:none; */
-    visibility: hidden;
+#my-stack {                                              /* TODO: JS animation needs to be applied here! */
+    display:none;
 }
 
 /* --------------- Section: Projects --------------- */
 
+.project-grid {
+    padding: 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: stretch;
+}
+.project-grid li {
+    background-color: hsla(64, 34%, 59%, 0.6);
+    border: 1px solid hsla(41, 32%, 25%, 0);
+    border-radius: 11%;
+    padding: 2% 1.4%;
+    margin: 2%;
+    min-width: 200px;
+    flex-basis: 200px;
+}
+.project-grid li:hover {
+    position: relative;
+    bottom: 4px;
+    background-color: hsla(64, 34%, 59%, 0.6);
+    border: 1px solid hsla(41, 32%, 25%, 0.2);
+    border-radius: 15px;
+    box-shadow: 30px 30px 80px #262119FF;
+}
+.project-grid span {
+    background-color: hsla(0, 0%, 50%, 0.3);
+    border-radius: 4px;
+    padding: 1%;
+}
+.project-grid small, .project-grid p {
+    text-align: left;
+    padding: 2%;
+}
+.project-title {
+    font-family: "Give You Glory";
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
 /* --------------- Section: Skills --------------- */
+
+.skill-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+}
+@media screen and (max-width: 840px) {
+    .skill-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3%;
+    }
+}
+@media screen and (max-width: 630px) {
+    .skill-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+.skill-item {
+    padding: 4%;
+    margin: 3%;
+    background-color: hsla(49, 25%, 83%, 0.8);
+    border: 2px solid #53462BFF;
+    border-radius: 8%;
+}
+.skill-item:hover {
+    background-color: hsla(20, 49%, 56%, 0.8);
+    color: hsla(49, 25%, 83%, 1);
+}
+.skill-category {
+    font-family: "Croissant One";
+    font-size: 0.9rem;
+}
+.skill-item ul {
+    margin: 0;
+    padding: 2% 0;
+}
+.skill-item li {
+    margin-left: 13%;
+    list-style: circle;
+    line-height: 2em;
+}
 
 /* --------------- Section: Work Experience --------------- */
 
+.job-title {
+    font-size: 1.3em;
+    text-shadow: 1px 2px 2px #c57b57ff;
+}
+.time-line::before {
+    content: "";
+    height: 100%;
+    width: 1.7px;
+    position: absolute;
+    left: 4%;
+    background-image: linear-gradient(#53462BFF, #53462B00);
+}
+.time-line {
+    margin-top: 3%;
+    padding-left: 10%;
+    position: relative;
+}
+.position {
+    padding: 12px;
+    width: 70%;
+    border: 1px solid hsla(41, 32%, 25%, 0);
+}
+.position h4 {
+    margin-top: 3%;
+}
+.position:hover {
+    position: relative;
+    bottom: 4px;
+    background-color: hsla(49, 25%, 83%, 0.6);
+    border: 1px solid hsla(41, 32%, 25%, 0.2);
+    border-radius: 15px;
+    box-shadow: 30px 30px 80px #262119FF;
+ }
+#experience ul li {
+    list-style: disc;
+}
 /* --------------- Section: Education --------------- */
+
+.education-item {
+    text-align: center;
+    margin: 1%;
+    padding: 1%;
+}
+.education-item h4 {
+    margin: 1%;
+    font-size: 1.2rem;
+}
+.education-item:hover {
+    background-color: #dfdbcaff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+}
+.details p {
+    margin: 1.5% 0;
+    font-weight: bold;
+}
+.details small {
+    font-size: 0.8rem;
+    margin: 1% 0;
+}
+.toggle:checked~.details {
+    max-height: 100%;
+}
 
 /* --------------- Footer --------------- */
 
@@ -158,8 +335,23 @@ footer {
 #social-media li:hover {
     filter: drop-shadow(1px 1px 1px white);
 }
-small {
-    display: block;
+#design-link {
+    float: right;
+    position: relative;
+    bottom: 44px;
+    right: 12px;
+    background-color: hsla(64, 34%, 59%, 1);
+    color: #262119ff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    text-wrap: pretty;
     text-align: center;
-    padding: 7px
+    font-family: 'Quicksand', Tahoma, sans-serif;
+    font-weight: 400;
+}
+.made-by {
+    padding: 1%;
+    margin: 1%;
+    display: block;
 }

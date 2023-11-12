@@ -10,22 +10,23 @@
         <meta name="keywords" content="Maria Scholz, Web Development, Software Engineering, Full Stack, Web Developer, Front End Developer">
         <!-- TITLE -->
         <title>Maria Scholz | Web Developer</title>
-        <!-- icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+        <!-- icons --> <!-- Font Favicon: Medula One -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/light/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/light/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/light/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <!-- FONTS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@200;400;500;600;700&family=Croissant+One&family=Give+You+Glory&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <!-- CSS -->
         <link rel="stylesheet" href="static/style.css" type="text/css">
     </head>
     <body>
         <div class="content-wrapper">                
                 <header>
-                    <h1><span>Maria</span> Scholz</h1>
+                    <h1><a href="https://maria-scholz.com" title="mariascholz.com"><span>Maria</span> Scholz</a></h1>
                     <h2>Software&nbsp; Engineer & Web&nbsp;Developer</h2>
                 </header>
                 
@@ -45,65 +46,92 @@
                             <img id="profile-pic" src="static/images/profile_photo.JPG" alt="profile picture" height="200px">
                             <p>After an extensive background in <b>Customer Service</b> and <b>Project Management</b> I decided to take the leap and transition my career into the realms of Software & Web Development. I now work as a <b>Software Engineer</b> for in-house Automation Solutions and Process Optimizations for an international semiconductor supplier company. However, my passion is <b>Web Development</b> and I am open for new opportunities while I keep growing my skill set.</p>
                             <p>I am self-taught with a strong desire to try new projects, discover problems and find innovative ways to solve them. My work ethics are grounded in a belief that <b>'everything is figure-out-able'</b>. I learn fast, apply knowledge practically and understand the power of collaboration.</p>
-                            <p>My second passion in life is <b>Surfing</b>, which is the perfect balance for me (along with Yoga and Meditation) after spending hours in front of the computer. Check out my surf blog at <a href="//https:www.surfineer.com">Surfineer.com</a>!</p>
+                            <p>My second passion in life is <b>Surfing</b>, which is the perfect balance for me (along with Yoga and Meditation) after spending hours in front of the computer. Check out my surf blog at <a href="//https:www.surfineer.com" target="_blank" title="will be online soon :)">Surfineer.com</a>!</p>
                         </div>
-                        <aside class="hidden">My Stack: Python HTML CSS Flask</aside>
+                        <aside id="my-stack" class="hidden">My Stack: Python HTML CSS Flask</aside>
                     </section>
-                    
+
                     <section id="projects">
                         <h3>Projects</h3>
-                        <ul>
-                            <li>Daily Wisdom</li>
-                            <li>Today in Japanese</li>
-                            <li>Count Down</li>
+                        <ul class="project-grid">
+                            <li>
+                                <h4 class="project-title"><a href="/example-sites/tea-cozy/tea-cozy.html">Tea Cozy Website</a></h4>
+                                <p>For this exercise from a Codecademy course I built a website for a Tea Shop according to the provided <a href="/example-sites/tea-cozy/img-tea-cozy-redline.jpg">mock-up</a>.</p>
+                                <small>Hosted on <span>Github</span></small>
+                            </li>
+                            <li title="coming soon!">
+                                <h4 class="project-title">Daily Wisdom</h4>
+                                <p>Check in here for your daily dose of inspirational quote, one piece of wisdom for every day.</p>
+                                <small>Hosted on <span>GCP</span> using <span>Flask</span> and <span>Firestore</span></small>
+                            </li>
+                            <li title="coming soon!">
+                                <h4 class="project-title">Today in Japanese</h4>
+                                <p>This page will tell you the current day of the week in Japanese!</p>
+                                <small>Hosted on <span>GCP</span> using <span>Flask</span></small>        
+                            </li>
+                            <li title="coming soon!">
+                                <h4 class="project-title">Count Down</h4>
+                                <p>Enter a date you are looking forward to and see how many days to go!</p>
+                                <small>Hosted on <span>GCP</span> using <span>Flask</span></small>
+                            </li>
                         </ul>
                     </section>
 
                     <section id="skills">
                         <h3>Skills</h3>
-                        <h4>Soft (Human) Skills</h4>
-                        <ul>
-                            <li>Strategic Problem Solving</li>
-                            <li>Adabtability</li>
-                            <li>Priority Management</li>
-                            <li>Self-Motivation</li>
-                            <li>Curiosity</li>
-                        </ul>
-                        <h4 class="hidden">Technical Skills</h4>
-                        <h5>Programming Languages</h5>
-                        <ul>
-                            <li>Python</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                        </ul>
-                        <h5>Libraries & Frameworks</h5>
-                        <ul>
-                            <li>Flask</li>
-                        </ul>
-                        <h5>Tools & Platforms</h5>
-                        <ul>
-                            <li>Google Cloud Platform</li>
-                            <li>GIT, Github, Gitlab</li>
-                            <li>OpenProject</li>
-                            <li>Atlassian</li>
-                        </ul>
+                        <div class="skill-wrapper">
+                            <div class="skill-item">
+                                <h4 class="skill-category">Soft (Human) Skills</h4>
+                                <ul>
+                                    <li>Strategic Problem Solving</li>
+                                    <li>Adabtability</li>
+                                    <li>Priority Management</li>
+                                    <li>Self-Motivation</li>
+                                    <li>Curiosity</li>
+                                </ul>
+                            </div>
+                                <h4 class="hidden">Technical Skills</h4>
+                            <div class="skill-item">
+                                <h5 class="skill-category">Programming Languages</h5>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                            </div>
+                            <div class="skill-item">
+                                <h5 class="skill-category">Libraries & Frameworks</h5>
+                                <ul>
+                                    <li>Flask</li>
+                                </ul>
+                            </div>
+                            <div class="skill-item">
+                                <h5 class="skill-category">Tools & Platforms</h5>
+                                <ul>
+                                    <li>Google Cloud Platform</li>
+                                    <li>GIT, Github, Gitlab</li>
+                                    <li>OpenProject</li>
+                                    <li>Atlassian</li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
 
                     <section id="experience">
                         <h3>Work Experience</h3>
-                        <ol>
-                            <li>
+                        <ol class="time-line">
+                            <li class="position">
                                 <h4>Toppan Photomasks</h4>
-                                <p>Front End Software Development Engineer</p>
+                                <p class="job-title">Front End Software Development Engineer</p>
                                 <p>since Sep 2023</p>
                                 <ul>
                                     <li>Driving process automation and continuous improvement projects to optimize data preparation and order entry procedures.</li>
                                     <li>Finding innovative techniques to enhance workflow efficiency and adopt agile project management methodology.</li>
                                 </ul>
                             </li>
-                            <li>
-                                <h4>Toppan Photomasks</h4>
-                                <p>Technical Customer Service Specialist</p>
+                            <li class="position">
+                                <h4 class="hidden">Toppan Photomasks</h4>
+                                <p class="job-title">Technical Customer Service Specialist</p>
                                 <p>Mar 2020 - Aug 2023</p>
                                 <ul>
                                     <li>Streamlined product order entry and support, ensuring accuracy and timely execution.</li>
@@ -111,27 +139,27 @@
                                     <li>Led customer review meetings and status reporting, contributing to elevated customer satisfaction rates.</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="position">
                                 <h4>Nortal (former Schuetze)</h4>
-                                <p>IT-Project Management Assistant</p>
+                                <p class="job-title">IT-Project Management Assistant</p>
                                 <p>Jul 2019 - Feb 2020</p>
                                 <ul>
                                     <li>Assisted in the establishment and optimization of project management procedures.</li>
                                     <li>Supported both strategic and operational project activities, ensuring alignment with business goals.</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="position">
                                 <h4>Tokyo Electron</h4>
-                                <p>Sales Administrative Assistant</p>
+                                <p class="job-title">Sales Administrative Assistant</p>
                                 <p>Mar 2018 - Feb 2013</p>
                                 <ul>
                                     <li>Managed international orders, ensuring compliance with supply chain and delivery schedules.</li>
                                     <li>Played a key role in customs documentation and export control procedures.</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="position">
                                 <h4>Google Maps</h4>
-                                <p>Data Quality Evaluator</p>
+                                <p class="job-title">Data Quality Evaluator</p>
                                 <p>Mar 2010 - Feb 2013</p>
                                 <ul>
                                     <li>Performed data analysis and content evaluation to enhance the accuracy of Google Maps.</li>
@@ -144,31 +172,62 @@
                     <section id="education">
                         <h3>Education & Resources</h3>
                         <ol>
-                            <li>
-                                <h4>Linkedin Learning</h4>
-                                <p>70+ courses</p>
-                                <p>since Oct 2020</p>
+
+                            <li class="education-item" title="Click for more info">
+                                <input type="checkbox" id="collapse-linkedin" class="hidden toggle">
+                                <label for="collapse-linkedin">
+                                    <h4 class="clickable">Linkedin Learning</h4>
+                                </label>
+                                <div class="details">
+                                    <p>70+ courses</p>
+                                    <small>since Oct 2020</small>
+                                </div>
                             </li>
-                            <li>
-                                <h4>Codecademy</h4>
-                                <p>Full-Stack Engineer Career Path</p>
-                                <p>since Sep 2023</p>
+
+                            <li class="education-item" title="Click for more info">
+                                <input type="checkbox" id="collapse-codecademy" class="hidden toggle">
+                                <label for="collapse-codecademy">
+                                    <h4 class="clickable">Codecademy</h4>
+                                </label>
+                                <div class="details">
+                                    <p>Full-Stack Engineer Career Path</p>
+                                    <small>since Sep 2023</small>
+                                </div>
                             </li>
-                            <li>
-                                <h4>Data Camp</h4>
-                                <p>Python Programmer Track</p>
-                                <p>since Sep 2023</p>
+
+                            <li class="education-item" title="Click for more info">
+                                <input type="checkbox" id="collapse-datacamp" class="hidden toggle">
+                                <label for="collapse-datacamp">
+                                    <h4 class="clickable">Data Camp</h4>
+                                </label>
+                                <div class="details">
+                                    <p>Python Programmer Track</p>
+                                    <small>since Sep 2023</small>
+                                </div>
                             </li>
-                            <li>
-                                <h4>Replit</h4>
-                                <p>90 Days of Code (Python)</p>
-                                <p>Dec 2022 - Apr 2023</p>
+
+                            <li class="education-item" title="Click for more info">
+                                <input type="checkbox" id="collapse-replit" class="hidden toggle">
+                                <label for="collapse-replit">
+                                    <h4 class="clickable">Replit</h4>
+                                </label>
+                                <div class="details">
+                                    <p>90 Days of Code (Python)</p>
+                                    <small>Dec 2022 - Apr 2023</small>
+                                </div>
                             </li>
-                            <li>
-                                <h4>University of Edinburgh</h4>
-                                <p>BSc Environmental Science & Ecology</p>
-                                <p>Sep 2013 - May 2016</p>
+
+                            <li class="education-item" title="Click for more info">
+                                <input type="checkbox" id="collapse-UoE" class="hidden toggle">
+                                <label for="collapse-UoE">
+                                    <h4 class="clickable">University of Edinburgh</h4>
+                                </label>
+                                <div class="details">
+                                    <p>BSc Environmental Science & Ecology</p>
+                                    <small>Sep 20213 - May 2016</small>
+                                </div>
                             </li>
+
                         </ol>
                     </section>
                 </main>
@@ -183,8 +242,8 @@
                     <li><a href="https://twitter.com/maria_remote" target="_blank"><img src="static/svgs/icons8-twitter_contrast.svg" alt="twitter x icon"></a></li>
                 </ul>
                 </div>
-                
-                <small>&copy; 2023 | Maria Scholz</small>
+                <small class="made-by">&copy; 2023 | Maria Scholz</small>
+                <a id="design-link" href="design.html" title="Check out my design system for this page">🎨</a>
             </footer>
 
         </div>
