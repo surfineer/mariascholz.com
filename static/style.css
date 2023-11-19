@@ -48,13 +48,11 @@ a {
     text-decoration: none;
     font-weight: bold;
     color: #262119ff;
-}
-a:hover, .clickable {
-    text-shadow: 1px 0px 3px #c57b57ff;
     cursor: pointer;
+    text-shadow: 1px 0px 3px #c57b57ff;
 }
 section h3 {
-    padding: 2% 0;
+    padding: 2% 2%;
     border-bottom: dotted 2px gray;
 }
 ol {
@@ -90,28 +88,13 @@ header h1 {
     padding: 2%;
     margin-bottom: -0.2em;
 }
-header h1 span {                                            /* TODO: do something funky with it!*/
-    font-weight: bolder;
-}
-
 header h2 {
     font-size: 2rem;
     padding: 2%;
     margin: 2% 0;
 }
-
 /* --------------- Nav --------------- */
 
-@media screen and (max-width: 600px) {
-    nav ol {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    nav li {
-        margin: 6px 0;
-    }
-}
 nav {
     background-color: #b5ba72ff;
     padding: 1% 0;
@@ -133,17 +116,28 @@ nav li a:hover {
     border-top: 2px solid #262119ff;
     border-bottom: 2px solid #262119ff;
 }
+@media screen and (max-width: 600px) {
+    nav ol {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin: 6px 0;
+    }
+}
 
 /* --------------- Section: About --------------- */
 
-.floats {
+/* .floats {
     display: flow-root;
-}
-.floats p {
-    margin: 0 1% 2%;
+} */
+.intro p {
+    margin: 3% 3%;
     padding: 0;
-}
-/* .floats p:first-child {
+    line-height: 1.35rem;
+} /*
+.floats p:first-child {
     margin: 0;
 } */
 #profile-pic {
@@ -156,6 +150,14 @@ nav li a:hover {
 #my-stack {                                              /* TODO: JS animation needs to be applied here! */
     display:none;
 }
+@media only screen and (max-width: 470px){
+    #profile-pic {
+        display: block;
+        float: none;
+        margin: 0 auto;    
+    }
+}
+
 
 /* --------------- Section: Projects --------------- */
 
@@ -174,15 +176,30 @@ nav li a:hover {
     padding: 2% 1.4%;
     margin: 2%;
     min-width: 200px;
+    min-height: 230px;
     flex-basis: 200px;
+    position: relative;
 }
-.project-grid li:hover {
+.project-grid p {
+    margin: 1.5%;
+}
+.project-grid a {
+    font-weight: 400;
+}
+/* .project-grid li:hover {
     position: relative;
     bottom: 4px;
     background-color: hsla(64, 34%, 59%, 0.6);
     border: 1px solid hsla(41, 32%, 25%, 0.2);
     border-radius: 15px;
     box-shadow: 30px 30px 80px #262119FF;
+} */
+.project-grid small {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: 3% 0;
 }
 .project-grid span {
     background-color: hsla(0, 0%, 50%, 0.3);
@@ -198,6 +215,8 @@ nav li a:hover {
     font-size: 1.1rem;
     text-align: center;
     font-weight: bold;
+    margin: 0;
+    padding: 8% 0;
 }
 /* --------------- Section: Skills --------------- */
 
@@ -206,20 +225,6 @@ nav li a:hover {
     grid-template-columns: repeat(4, 1fr);
     gap: 3%;
 }
-@media screen and (max-width: 840px) {
-    .skill-wrapper {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3%;
-    }
-}
-@media screen and (max-width: 630px) {
-    .skill-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
 .skill-item {
     padding: 4%;
     margin: 3%;
@@ -227,13 +232,14 @@ nav li a:hover {
     border: 2px solid #53462BFF;
     border-radius: 8%;
 }
-.skill-item:hover {
+/* .skill-item:hover {
     background-color: hsla(20, 49%, 56%, 0.8);
     color: hsla(49, 25%, 83%, 1);
-}
+} */
 .skill-category {
     font-family: "Croissant One";
     font-size: 0.9rem;
+    margin-left: 6%;
 }
 .skill-item ul {
     margin: 0;
@@ -243,6 +249,21 @@ nav li a:hover {
     margin-left: 13%;
     list-style: circle;
     line-height: 2em;
+}
+@media screen and (max-width: 840px) {
+    .skill-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .skill-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 /* --------------- Section: Work Experience --------------- */
@@ -266,20 +287,20 @@ nav li a:hover {
 }
 .position {
     padding: 12px;
-    width: 70%;
+    width: 100%;
     border: 1px solid hsla(41, 32%, 25%, 0);
 }
 .position h4 {
     margin-top: 3%;
 }
-.position:hover {
+/* .position:hover {
     position: relative;
     bottom: 4px;
     background-color: hsla(49, 25%, 83%, 0.6);
     border: 1px solid hsla(41, 32%, 25%, 0.2);
     border-radius: 15px;
     box-shadow: 30px 30px 80px #262119FF;
- }
+ } */
 #experience ul li {
     list-style: disc;
 }
@@ -293,11 +314,12 @@ nav li a:hover {
 .education-item h4 {
     margin: 1%;
     font-size: 1.2rem;
+    cursor: pointer;
+    text-shadow: 1px 0px 3px #c57b57ff;
 }
 .education-item:hover {
     background-color: #dfdbcaff;
     border-radius: 5px;
-    cursor: pointer;
 }
 .details {
     max-height: 0;
@@ -335,7 +357,7 @@ footer {
 #social-media li:hover {
     filter: drop-shadow(1px 1px 1px white);
 }
-#design-link {
+/* #design-link {
     float: right;
     position: relative;
     bottom: 44px;
@@ -350,8 +372,9 @@ footer {
     font-family: 'Quicksand', Tahoma, sans-serif;
     font-weight: 400;
 }
-.made-by {
+*/
+.fineprint{
+    display: flex;
+    justify-content: space-between;
     padding: 1%;
-    margin: 1%;
-    display: block;
 }
