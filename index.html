@@ -30,8 +30,8 @@
                 <h2>Software&nbsp; Engineer & Web&nbsp;Developer</h2>
             </header>
             
-            <nav>
-                <ol>
+            <nav class="navbar">
+                <ol class="nav-wrapper">
                     <li><a href="#about">about me</a></li>
                     <li><a href="#projects">my projects</a></li>
                     <li><a href="#skills">skills</a></li>
@@ -46,7 +46,7 @@
                         <img id="profile-pic" src="static/images/profile_photo.JPG" alt="profile picture" height="200px">
                         <p>After an extensive background in <b>Customer Service</b> and <b>Project Management</b> I decided to take the leap and transition my career into the realms of Software & Web Development. I now work as a <b>Software Engineer</b> for in-house Automation Solutions and Process Optimizations for an international semiconductor supplier company. However, my passion is <b>Web Development</b> and I am open for new opportunities while I keep growing my skill set.</p>
                         <p>I am self-taught with a strong desire to try new projects, embrace problems and find innovative ways to solve them. My work ethics are grounded in a belief that <b>'everything is figure-out-able'</b>. I learn fast, apply knowledge practically and understand the power of collaboration.</p>
-                        <p>My second passion in life is <b>Surfing</b>, which is the perfect balance for me (along with Yoga and Meditation) after spending hours in front of the computer. Check out my surf blog at <a href="//https:www.surfineer.com" target="_blank" title="will be online soon :)">Surfineer.com</a>!</p>
+                        <p>My second passion in life is <b>Surfing</b>, which is the perfect balance for me (along with Yoga and Meditation) after spending hours in front of the computer. Check out my surf blog at <a href="https://surfineer.com" target="_blank">Surfineer.com</a>!</p>
                     </div>
                     <aside id="my-stack" class="hidden">My Stack: Python HTML CSS Flask</aside>
                 </section>
@@ -62,29 +62,41 @@
                         </li>
 
                         <li>
-                            <a href="https://surfineer.github.io/rajasurfschool/" target="_blank"><h4 class="project-title">Raja Surf School</h4></a>
+                            <a href="https://surfineer.github.io/rajasurfschool/" target="_blank">
+                                <h4 class="project-title">Raja Surf School</h4>
+                            </a>
                             <p>Multi-page website built for a friend's surf school in Sri Lanka.</p>
                             <small>Hosted on <span>Github</span></small>
                         </li>
 
                         <li>
-                            <a href="/example-sites/tea-cozy/tea-cozy.html" target="_blank"><h4 class="project-title">Tea Cozy Website</h4></a>
+                            <a href="/example-sites/tea-cozy/tea-cozy.html" target="_blank">
+                                <h4 class="project-title">Tea Cozy Website</h4>
+                            </a>
                             <p>For this exercise from a Codecademy course I built a website for a Tea Shop according to the provided <a href="/example-sites/tea-cozy/img-tea-cozy-redline.jpg">mock-up</a>.</p>
                             <small>Hosted on <span>Github</span></small>
                         </li>
 
-                        <li title="coming soon!">
-                            <h4 class="project-title">Daily Wisdom</h4>
+                        <li>
+                            <a href="https://surfineer.com/quote" target="_blank">                          
+                                <h4 class="project-title">Daily Wisdom</h4>
+                            </a>
                             <p>Check in here for your daily dose of inspirational quote, one piece of wisdom for every day.</p>
                             <small>Hosted on <span>GCP</span> using <span>Flask</span> and <span>Firestore</span></small>
                         </li>
-                        <li title="coming soon!">
-                            <h4 class="project-title">Today in Japanese</h4>
+
+                        <li>
+                            <a href="https://surfineer.com/japanese" target="_blank">
+                                <h4 class="project-title">Today in Japanese</h4>
+                            </a>
                             <p>This page will tell you the current day of the week in Japanese!</p>
                             <small>Hosted on <span>GCP</span> using <span>Flask</span></small>        
                         </li>
-                        <li title="coming soon!">
-                            <h4 class="project-title">Count Down</h4>
+
+                        <li>
+                            <a href="https://surfineer.com/countdown" target="_blank">
+                                <h4 class="project-title">Count Down</h4>
+                            </a>
                             <p>Enter a date you are looking forward to and see how many days to go!</p>
                             <small>Hosted on <span>GCP</span> using <span>Flask</span></small>
                         </li>
@@ -110,8 +122,9 @@
                             <h5 class="skill-category">Programming Languages</h5>
                             <ul>
                                 <li>Python</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
+                                <li>JavaScript</li>
+                                <li>HTML/CSS</li>
+                                <li>SQL</li>
                             </ul>
                         </div>
                         <div class="skill-item">
@@ -125,7 +138,7 @@
                             <ul>
                                 <li>Google Cloud Platform</li>
                                 <li>GIT, Github, Gitlab</li>
-                                <li>Linux / Bash</li>
+                                <li>Linux/Bash</li>
                                 <li>OpenProject</li>
                                 <li>Atlassian</li>
                             </ul>
@@ -188,6 +201,14 @@
                 <section id="education">
                     <h3>Education & Resources</h3>
                     <ol>
+
+                        <!-- <li class="education-item">
+                            <details for="collapse-UoE">
+                                <summary>University of Edinburgh</summary>
+                                <p>BSc Environmental Science & Ecology</p>
+                                <small>Sep 2013 - May 2016</small>
+                            </details>
+                        </li> -->
 
                         <li class="education-item" title="Click for more info">
                             <input type="checkbox" id="collapse-UoE" class="hidden toggle">

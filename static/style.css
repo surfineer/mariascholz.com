@@ -103,24 +103,24 @@ header h2 {
 }
 /* --------------- Nav --------------- */
 
-nav {
+.navbar {
     background-color: #b5ba72ff;
     padding: 1% 0;
     margin: 3% 0;
 }
-nav ol {
+.nav-wrapper {
     display: flex;
     justify-content: space-around;
     padding: 6px 12px;
     margin: 0;
 }
-nav li a {
+.nav-wrapper a {
     box-sizing: border-box;
     color: #262119ff;
     padding: 4px;
     text-transform: uppercase;
 }
-nav li a:hover {
+.nav-wrapper a:hover {
     border-top: 2px solid #262119ff;
     border-bottom: 2px solid #262119ff;
 }
